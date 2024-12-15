@@ -3,71 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScholarU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/main.js"></script>
+  <title>Scholarships Search</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>ScholarU</h1>
-  
-  <div id="description">
-    <p>Welcome to ScholarU, your one-stop destination for finding scholarships that match your unique profile. Our powerful filtering system allows you to narrow down the scholarships based on various criteria such as name, type, faculty, GPA, gender, indigenous status, disability, race, nationality, and year.</p>
-    <p>To get started, simply fill in the relevant fields in the filter form below. As you enter your preferences, ScholarU will dynamically update the list of matching scholarships. You can combine multiple filters to find the most relevant opportunities for you.</p>
-    <p>ScholarU's filtering system works by comparing your input with our extensive database of scholarships. It matches the scholarships based on the criteria you specify and displays the results in real-time. This way, you can quickly and easily find the scholarships that align with your background, academic achievements, and personal attributes.</p>
-    <p> Scholarships marked with an asterisk (*) are funded by the University of Victoria Foundation.</p>
-  </div>
-  
-  <div id="scholarship-form">
-    <form id="filter-form">
-      <div id="filters">
-        <div class="filter">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter scholarship name">
+  <header>
+    <div class="header-container">
+      <h1 class="logo">ScholarU</h1>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Featured Scholarships</a>
+        <a href="#">Browse Scholarships</a>
+        <a href="#">Resources</a>
+      </nav>
+      <button class="sign-up">Sign Up</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <div class="intro-banner">
+        <h2>Explore UVic Scholarships</h2>
+        <p>ScholarU makes it simple to browse and apply for scholarships tailored to your profile.</p>
+        <p class="vike-labs">👋 Built by students @ <a href="#">VikeLabs</a></p>
+      </div>
+      <form id="scholarshipSearchForm">
+        <div class="filter-grid">
+          <div class="filter-item">
+            <label for="scholarshipName">Name:</label>
+            <input type="text" id="scholarshipName" placeholder="Enter scholarship name">
+          </div>
+          <div class="filter-item">
+            <label for="scholarshipType">Type:</label>
+            <input type="text" id="scholarshipType" placeholder="Enter scholarship type">
+          </div>
+          <div class="filter-item">
+            <label for="faculty">Faculty:</label>
+            <input type="text" id="faculty" placeholder="Enter faculty">
+          </div>
+          <div class="filter-item">
+            <label for="gpa">GPA:</label>
+            <input type="text" id="gpa" placeholder="Enter minimum GPA">
+          </div>
+          <div class="filter-item">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label for="race">Race:</label>
+            <input type="text" id="race" placeholder="Enter race">
+          </div>
+          <div class="filter-item">
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" placeholder="Enter nationality">
+          </div>
+          <div class="filter-item">
+            <label for="year">Year:</label>
+            <input type="text" id="year" placeholder="Enter year">
+          </div>
+          <div class="filter-item">
+            <label for="citizenship">Citizenship:</label>
+            <input type="text" id="citizenship" placeholder="Enter citizenship">
+          </div>
+          <div class="filter-item">
+            <label for="heritage">Heritage:</label>
+            <input type="text" id="heritage" placeholder="Enter heritage">
+          </div>
+          <div class="filter-item">
+            <label for="regionOfStudy">Region of Study:</label>
+            <input type="text" id="regionOfStudy" placeholder="Enter region">
+          </div>
         </div>
-        <div class="filter">
-          <label for="scholarshipType">Type:</label>
-          <input type="text" id="scholarshipType" name="scholarshipType" placeholder="Enter scholarship type">
+        <button type="submit" class="search-button">Search</button>
+      </form>
+    </section>
+
+    <section class="results-section">
+      <h2>Matching Scholarships</h2>
+      <p>44,052 scholarship(s) found, totalling $56,912,895+ in value.</p>
+      <div class="scholarship-results">
+        <div class="scholarship">
+          <h3>Skills Ontario Pin & Medal Design Contests</h3>
+          <p>Value: $500</p>
+          <p>Deadline: November 22, 2024</p>
         </div>
-        <div class="filter">
-          <label for="faculty">Faculty:</label>
-          <input type="text" id="faculty" name="faculty" placeholder="Enter faculty">
-        </div>
-        <div class="filter">
-          <label for="gpa">GPA:</label>
-          <input type="text" id="gpa" name="gpa" placeholder="Enter minimum GPA">
-        </div>
-        <div class="filter">
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender">
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="two-spirit">Two-Spirit</option>
-            <option value="trans">Trans</option>
-            <option value="non-binary">Non-Binary</option>
-          </select>
-        </div>
-        <div class="filter">
-          <label for="race">Race:</label>
-          <input type="text" id="race" name="race" placeholder="Enter race">
-        </div>
-        <div class="filter">
-          <label for="nationality">Nationality:</label>
-          <input type="text" id="nationality" name="nationality" placeholder="Enter nationality">
-        </div>
-        <div class="filter">
-          <label for="year">Year:</label>
-          <input type="text" id="year" name="year" placeholder="Enter year">
+        <div class="scholarship">
+          <h3>Stefan Savoie Memorial Scholarship</h3>
+          <p>Value: $1,000</p>
+          <p>Deadline: November 23, 2024</p>
         </div>
       </div>
-      <button type="submit">Search</button>
-    </form>
-  </div>
+    </section>
+  </main>
 
-  <div id="scholarships">
-    <h2>Matching Scholarships:</h2>
-    <ul id="scholarship-list"></ul>
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
